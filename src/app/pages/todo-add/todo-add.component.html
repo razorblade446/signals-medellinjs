@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Add Todo</h1>
+<form #todoForm="ngForm" class="todo-add__form" mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput name="title" [(ngModel)]="model.title" required minlength="10"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input type="text" matInput name="description" [(ngModel)]="model.description" required
+           minlength="10"/>
+  </mat-form-field>
+
+  <div class="todo-add__form__section">
+
+  </div>
+</form>
+<div mat-dialog-actions>
+  <button type="submit" mat-raised-button color="primary"
+          [disabled]="!!todoForm.invalid || isSaving"
+          (click)="save()">
+    Save
+  </button>
+</div>

@@ -1,0 +1,21 @@
+.todo-add {
+  padding: 10px;
+
+  &__form {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    mat-form-field, &__section {
+      flex: 0 0 100%;
+    }
+
+    &__section {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}

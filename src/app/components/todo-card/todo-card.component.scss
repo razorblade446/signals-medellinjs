@@ -1,0 +1,14 @@
+:host {
+  mat-card {
+    width: 100%;
+  }
+}
+
+.todo-card {
+  width: 100%;
+  background-color: #fff0f0;
+
+  &.done {
+    background-color: #F0FFF0;
+  }
+}

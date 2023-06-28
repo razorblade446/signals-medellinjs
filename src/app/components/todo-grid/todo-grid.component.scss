@@ -1,0 +1,14 @@
+.todo-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  width: 100%;
+  margin: 0 auto;
+
+  &__item {
+    flex: 0 0 100%;
+  }
+}

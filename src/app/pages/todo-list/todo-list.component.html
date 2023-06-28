@@ -1,0 +1,16 @@
+<div class="todo-list">
+  <div class="todo-list__items">
+    <ng-container *ngIf="todoItems.length > 0; else noItems">
+      <h2 class="completion">{{ completion }}% Complete</h2>
+      <rb-todo-card class="todo-item" *ngFor="let todoItem of todoItems" [todoItem]="todoItem"
+                    (markDone)="markDone($event, todoItem)"></rb-todo-card>
+    </ng-container>
+  </div>
+  <button mat-fab class="action-button" color="primary" [disabled]="isOpenedDialog" (click)="openAddDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<ng-template #noItems>
+  <div class="todo-item--empty">There are no ToDos, try to add a new one <a [routerLink]="['/', 'add']">Here</a></div>
+</ng-template>
